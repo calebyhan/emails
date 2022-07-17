@@ -1,19 +1,28 @@
+'''
+Emails
+Author: Caleb Han
+'''
+
+# imports
 import smtplib, ssl
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
+# server/port
 smtp_server = 'smtp.gmail.com'
 port = 465
 
-sender = 'testemailcyh@gmail.com'
+# input sending/recieving emails
+sender = ''
 password = input('Enter your password here: ')
-receiver = 'calebhantech@gmail.com'
+receiver = ''
 
 message = MIMEMultipart('alternative')
 message['Subject'] = 'Multipart Test'
 message['From'] = sender
 message['To'] = receiver
 
+# sample email to send
 text = """\
 Hi, 
 How are you?
@@ -21,6 +30,7 @@ fsdfijsidfjsodi
 www.gmail.com
 """
 
+# sample html to send
 html = """\
 <html>
     <body>
